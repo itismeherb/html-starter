@@ -1,96 +1,829 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erasmus+ Grecja 2025 | ZST Mielec – Praktyki zawodowe w Atenach</title>
+  <meta name="description"
+    content="Strona projektu Erasmus+ realizowanego przez Zespół Szkół Technicznych w Mielcu. Praktyki zawodowe w Grecji, AKMI International, 3-16 maja 2025. Projekt FERS-VET-2025-1-PL01-KA122-VET-000339499.">
+  <meta name="keywords"
+    content="Erasmus+, ZST Mielec, praktyki zawodowe, Grecja, AKMI International, Ateny, EDU-IT, FERS">
+  <meta name="author" content="ZST Mielec – Agnieszka Pieróg">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="main-header">
+    <div class="header-inner">
+      <a href="#home" class="logo" id="logo">
+        <span class="logo-eu">🇪🇺</span>
+        <span class="logo-text">Erasmus<span class="logo-plus">+</span> ZST Mielec</span>
+      </a>
+
+      <nav id="main-nav">
+        <a href="#home" class="nav-link active" data-section="home">Strona Główna</a>
+        <a href="#participants" class="nav-link" data-section="participants">Uczestnicy</a>
+        <a href="#gallery" class="nav-link" data-section="gallery">Galeria</a>
+        <a href="#companies" class="nav-link" data-section="companies">Firmy</a>
+      </nav>
+
+      <button id="menu-toggle" class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay -->
+  <div id="mobile-nav" class="mobile-nav-overlay">
+    <a href="#home" class="mobile-nav-link" data-section="home">Strona Główna</a>
+    <a href="#participants" class="mobile-nav-link" data-section="participants">Uczestnicy</a>
+    <a href="#gallery" class="mobile-nav-link" data-section="gallery">Galeria</a>
+    <a href="#companies" class="mobile-nav-link" data-section="companies">Firmy</a>
+  </div>
+
+  <!-- ========== HERO / HOME ========== -->
+  <section id="home" class="hero">
+    <div class="hero-particles" id="hero-particles"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge reveal-up">
+        <span class="badge-flag">🇬🇷</span>
+        <span>Erasmus+ Mobilność</span>
+      </div>
+      <h1 class="hero-title reveal-up delay-1">
+        Praktyki Zawodowe<br>
+        <span class="hero-highlight">w Grecji</span>
+      </h1>
+      <p class="hero-subtitle reveal-up delay-2">
+        Zespół Szkół Technicznych w Mielcu &bull; AKMI International, Ateny
+      </p>
+      <p class="hero-dates reveal-up delay-3">
+        <span class="date-icon">📅</span> 3 – 16 maja 2025
+      </p>
+
+      <div class="hero-stats reveal-up delay-4">
+        <div class="stat-item">
+          <span class="stat-number" data-count="12">0</span>
+          <span class="stat-label">Uczestników</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="14">0</span>
+          <span class="stat-label">Dni</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="2">0</span>
+          <span class="stat-label">Wycieczki</span>
+        </div>
+      </div>
+
+      <div class="hero-actions reveal-up delay-5">
+        <a href="#participants" class="btn btn-primary">
+          <span>Poznaj uczestników</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#companies" class="btn btn-outline">
+          <span>O projekcie</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator reveal-up delay-5">
+      <div class="scroll-mouse">
+        <div class="scroll-dot"></div>
+      </div>
+      <span>Przewiń w dół</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT STRIP ========== -->
+  <section class="about-strip">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-card reveal-left">
+          <div class="about-icon">🏫</div>
+          <h3>ZST Mielec</h3>
+          <p>Zespół Szkół Technicznych w Mielcu – szkoła wysyłająca</p>
+        </div>
+        <div class="about-card reveal-up">
+          <div class="about-icon">✈️</div>
+          <h3>Ateny, Grecja</h3>
+          <p>Praktyki w stolicy Grecji, w dzielnicy Omonia</p>
+        </div>
+        <div class="about-card reveal-up delay-1">
+          <div class="about-icon">🏨</div>
+          <h3>Retroverse Eccentric Stay</h3>
+          <p>Hostel w sercu Aten, dzielnica Omonia</p>
+        </div>
+        <div class="about-card reveal-right">
+          <div class="about-icon">🎓</div>
+          <h3>AKMI International</h3>
+          <p>Firma przyjmująca – organizator praktyk zawodowych</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECT DESCRIPTION ========== -->
+  <section class="project-description-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">O Projekcie</span>
+        <h2 class="section-title">Zagraniczna Mobilność Edukacyjna</h2>
+      </div>
+
+      <div class="project-content reveal-up">
+        <div class="project-text">
+          <p>W dniach od 3 do 16 maja nasi uczniowie przebywali w Atenach, gdzie odbywali praktyki zawodowe.</p>
+          <p>Podczas dwutygodniowych praktyk uczniowie pogłębiali swoją wiedzę teoretyczną oraz umiejętności praktyczne,
+            poznając technologie i standardy obowiązujące w innym kraju. Był to intensywny czas zdobywania nowych
+            doświadczeń, poznawania greckiej kultury i szlifowania umiejętności komunikowania się w języku angielskim w
+            środowisku międzynarodowym.</p>
+          <p>Zdobyte umiejętności, wiedza i niezapomniane doświadczenia z pewnością będą procentować w ich przyszłości i
+            staną się cennym krokiem w ich dalszej edukacji i karierze zawodowej. Jesteśmy dumni z ich zaangażowania,
+            odpowiedzialności i otwartości na nowe wyzwania.</p>
+        </div>
+
+        <div class="project-quote reveal-up delay-1">
+          <blockquote>
+            Dziękujemy naszym partnerom oraz osobom wspierającym realizację projektu. Szczególne podziękowania kierujemy
+            do Dyrekcji szkoły za nieustanne wspieranie wszelkich działań umożliwiających uczniom udział w wyjazdach
+            edukacyjnych i międzynarodowych projektach, dzięki czemu nasza szkoła staje się miejscem nowoczesnej
+            edukacji i inspirujących możliwości.
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Coordinators -->
+      <div class="coordinators-grid reveal-up delay-2">
+        <div class="coordinator-card">
+          <div class="coordinator-avatar">AP</div>
+          <div class="coordinator-info">
+            <h4>Agnieszka Brzozowska</h4>
+            <span class="coordinator-role">Koordynator projektu w ZST Mielec</span>
+          </div>
+        </div>
+        <div class="coordinator-card">
+          <div class="coordinator-avatar">MP</div>
+          <div class="coordinator-info">
+            <h4>Marta Popiołek</h4>
+            <span class="coordinator-role">Przygotowanie uczniów do praktyk i wyjazdu</span>
+          </div>
+        </div>
+        <div class="coordinator-card">
+          <div class="coordinator-avatar">AP</div>
+          <div class="coordinator-info">
+            <h4>Agnieszka Pieróg</h4>
+            <span class="coordinator-role">Opieka nad uczniami i przebiegiem praktyk w Grecji</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIMELINE ========== -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Harmonogram</span>
+        <h2 class="section-title">Przebieg Wyjazdu</h2>
+        <p class="section-desc">14 dni pełnych nauki, praktyk i niezapomnianych przygód</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">3 maja</span>
+            <h3>Wylot do Aten ✈️</h3>
+            <p>Początek naszej greckiej przygody – podróż z Mielca do Aten</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">4–9 maja</span>
+            <h3>Praktyki w AKMI International 💼</h3>
+            <p>Pierwszy tydzień praktyk zawodowych w renomowanej greckiej firmie</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Weekend I</span>
+            <h3>Wycieczka na Akropol 🏛️</h3>
+            <p>Zwiedzanie legendarnego Akropolu – symbolu starożytnych Aten i greckiej cywilizacji</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">Weekend II</span>
+            <h3>Wyspa Aegina ⛵</h3>
+            <p>Rejs na piękną wyspę Aegina – relaks, plaże i grecka kultura</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">11–15 maja</span>
+            <h3>Kontynuacja praktyk 📚</h3>
+            <p>Drugi tydzień intensywnych praktyk i zdobywania doświadczenia</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">16 maja</span>
+            <h3>Powrót do Polski 🇵🇱</h3>
+            <p>Koniec wyjazdu – powrót z bagażem doświadczeń i wspomnień</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PARTICIPANTS ========== -->
+  <section id="participants" class="participants-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Nasz Zespół</span>
+        <h2 class="section-title">Uczestnicy Projektu</h2>
+        <p class="section-desc">12 uczniów ZST Mielec, którzy odbyli praktyki zawodowe w Grecji</p>
+      </div>
+
+      <div class="participants-grid">
+
+        <div class="participant-card reveal-up">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder gastro">AB</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Adam Borek</h3>
+            <span class="participant-class">Klasa 3G</span>
+            <span class="participant-field">
+              <span class="field-dot gastro"></span>
+              Technik żywienia i usług gastronomicznych
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-1">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder graphic">AR</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Alan Ryba</h3>
+            <span class="participant-class">Klasa 4GR</span>
+            <span class="participant-field">
+              <span class="field-dot graphic"></span>
+              Technik grafiki i poligrafii cyfrowej
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-2">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder graphic">DK</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Dominika Kukiełka</h3>
+            <span class="participant-class">Klasa 4GR</span>
+            <span class="participant-field">
+              <span class="field-dot graphic"></span>
+              Technik grafiki i poligrafii cyfrowej
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder graphic">ER</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Emilia Rzeźnik</h3>
+            <span class="participant-class">Klasa 4GR</span>
+            <span class="participant-field">
+              <span class="field-dot graphic"></span>
+              Technik grafiki i poligrafii cyfrowej
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-1">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder programmer">KG</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Karol Głaz</h3>
+            <span class="participant-class">Klasa 4AP</span>
+            <span class="participant-field">
+              <span class="field-dot programmer"></span>
+              Technik programista
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-2">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder programmer">KP</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Karol Pyzikiewicz</h3>
+            <span class="participant-class">Klasa 3P</span>
+            <span class="participant-field">
+              <span class="field-dot programmer"></span>
+              Technik programista
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder graphic">KN</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Katarzyna Nakoneczna</h3>
+            <span class="participant-class">Klasa 4GR</span>
+            <span class="participant-field">
+              <span class="field-dot graphic"></span>
+              Technik grafiki i poligrafii cyfrowej
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-1">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder mechanic">KK</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Krystian Kołek</h3>
+            <span class="participant-class">Klasa 3M</span>
+            <span class="participant-field">
+              <span class="field-dot mechanic"></span>
+              Technik mechanik CNC
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-2">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder programmer">ML</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Mikołaj Laskowski</h3>
+            <span class="participant-class">Klasa 4AP</span>
+            <span class="participant-field">
+              <span class="field-dot programmer"></span>
+              Technik programista
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder graphic">NP</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Natalia Pająk</h3>
+            <span class="participant-class">Klasa 4GR</span>
+            <span class="participant-field">
+              <span class="field-dot graphic"></span>
+              Technik grafiki i poligrafii cyfrowej
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-1">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder graphic">WC</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Wiktor Cieśla</h3>
+            <span class="participant-class">Klasa 3GR</span>
+            <span class="participant-field">
+              <span class="field-dot graphic"></span>
+              Technik grafiki i poligrafii cyfrowej
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+        <div class="participant-card reveal-up delay-2">
+          <div class="participant-avatar">
+            <div class="avatar-placeholder programmer">WK</div>
+          </div>
+          <div class="participant-info">
+            <h3 class="participant-name">Wojciech Kozłowski</h3>
+            <span class="participant-class">Klasa 3P</span>
+            <span class="participant-field">
+              <span class="field-dot programmer"></span>
+              Technik programista
+            </span>
+            <span class="participant-company">
+              <span class="company-icon">🏢</span>
+              AKMI International
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Specialization Legend -->
+      <div class="specialization-legend reveal-up">
+        <h4>Specjalizacje uczestników</h4>
+        <div class="legend-items">
+          <div class="legend-item">
+            <span class="legend-dot programmer"></span>
+            <span>Technik programista (4 osoby)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot graphic"></span>
+            <span>Technik grafiki i poligrafii cyfrowej (6 osób)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot mechanic"></span>
+            <span>Technik mechanik CNC (1 osoba)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot gastro"></span>
+            <span>Technik żywienia i usług gastronomicznych (1 osoba)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Wspomnienia</span>
+        <h2 class="section-title">Galeria Zdjęć</h2>
+        <p class="section-desc">Najlepsze momenty z naszego wyjazdu do Grecji</p>
+      </div>
+
+      <div class="gallery-filters reveal-up">
+        <button class="filter-btn active" data-filter="all">Wszystkie</button>
+        <button class="filter-btn" data-filter="praktyki">Praktyki</button>
+        <button class="filter-btn" data-filter="wycieczki">Wycieczki</button>
+        <button class="filter-btn" data-filter="ateny">Ateny</button>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal-up" data-category="praktyki">
+          <img src="galeria/PXL_20260511_175242201.jpg" alt="Praktyki w AKMI International" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Praktyki w AKMI International</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-tall reveal-up delay-1" data-category="wycieczki">
+          <img src="galeria/P1060247.jpg" alt="Akropol" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Widok na Akropol</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up delay-2" data-category="ateny">
+          <img src="galeria/PXL_20260504_175716064.jpg" alt="Ulice Aten" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Ulice Aten</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up" data-category="wycieczki">
+          <img src="galeria/P1060178.jpg" alt="Wyspa Aegina" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Wyspa Aegina</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-wide reveal-up delay-1" data-category="praktyki">
+          <img src="galeria/702685719_2139693676758508_4357968435999329713_n.jpg" alt="Zespół w pracy" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Zespół podczas praktyk</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up delay-2" data-category="ateny">
+          <img src="galeria/PXL_20260505_165807456.jpg" alt="Omonia" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Dzielnica Omonia</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-tall reveal-up" data-category="wycieczki">
+          <img src="galeria/702501701_2139694286758447_2021025124978532283_n.jpg" alt="Grupowe zdjecie z praktyk"
+            loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Grupowe zdjęcie z praktyk</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up delay-1" data-category="ateny">
+          <img src="galeria/PXL_20260509_094214905.jpg" alt="Ateny nocą" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Ateny nocą</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal-up delay-2" data-category="praktyki">
+          <img src="galeria/688053947_2210482489755491_5312341455209239722_n.jpg"
+            alt="Grupowe zdjęcie z lokalnymi studentami" loading="lazy">
+          <div class="gallery-overlay">
+            <span class="gallery-caption">Grupowe zdjęcie z lokalnymi studentami</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COMPANIES ========== -->
+  <section id="companies" class="companies-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Partnerzy</span>
+        <h2 class="section-title">Firmy i Organizacje</h2>
+        <p class="section-desc">Instytucje zaangażowane w realizację projektu Erasmus+</p>
+      </div>
+
+      <div class="companies-grid">
+
+        <!-- Sending School -->
+        <div class="company-card company-featured reveal-left">
+          <div class="company-badge">Szkoła wysyłająca</div>
+          <div class="company-icon-wrap">
+            <span class="company-emoji">🏫</span>
+          </div>
+          <h3>Zespół Szkół Technicznych w Mielcu</h3>
+          <p class="company-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Mielec, Polska
+          </p>
+          <p class="company-desc">Szkoła organizująca wyjazd w ramach programu Erasmus+. ZST w Mielcu to renomowana
+            placówka edukacyjna kształcąca przyszłych specjalistów w branżach: programowania, grafiki cyfrowej,
+            mechaniki CNC i gastronomii. Koordynator projektu w ZST – pani Agnieszka Brzozowska.</p>
+          <div class="company-tags">
+            <span class="tag">Organizator</span>
+            <span class="tag">Szkoła</span>
+            <span class="tag">Polska</span>
+          </div>
+        </div>
+
+        <!-- Host Company -->
+        <div class="company-card company-featured reveal-right">
+          <div class="company-badge accent">Firma przyjmująca</div>
+          <div class="company-icon-wrap">
+            <span class="company-emoji">🏢</span>
+          </div>
+          <h3>AKMI International</h3>
+          <p class="company-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Ateny, Grecja
+          </p>
+          <p class="company-desc">Firma organizująca praktyki zawodowe w Atenach. AKMI International to wiodąca
+            instytucja edukacyjna i szkoleniowa w Grecji, specjalizująca się w kształceniu praktycznym w obszarach
+            technologii i biznesu.</p>
+          <div class="company-tags">
+            <span class="tag">Praktyki</span>
+            <span class="tag">IT & Technologie</span>
+            <span class="tag">Grecja</span>
+          </div>
+        </div>
+
+        <!-- EDU-IT Consortium Leader -->
+        <div class="company-card company-featured reveal-left">
+          <div class="company-badge accent">Lider Konsorcjum</div>
+          <div class="company-icon-wrap">
+            <span class="company-emoji">🤝</span>
+          </div>
+          <h3>EDU-IT</h3>
+          <p class="company-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Rzeszów, Polska
+          </p>
+          <p class="company-desc">Lider Konsorcjum Erasmus+, specjalizujący się m.in. w organizacji kształcenia i
+            szkolenia zawodowego. Projekt realizowany jest we współpracy z firmą EDU-IT z Rzeszowa.</p>
+          <div class="company-tags">
+            <span class="tag">Konsorcjum</span>
+            <span class="tag">Kształcenie zawodowe</span>
+            <span class="tag">Rzeszów</span>
+          </div>
+        </div>
+
+        <!-- Accommodation -->
+        <div class="company-card reveal-right">
+          <div class="company-badge">Zakwaterowanie</div>
+          <div class="company-icon-wrap">
+            <span class="company-emoji">🏨</span>
+          </div>
+          <h3>Retroverse Eccentric Stay</h3>
+          <p class="company-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Omonia, Ateny, Grecja
+          </p>
+          <p class="company-desc">Hostel w centrum Aten, w tętniącej życiem dzielnicy Omonia. Doskonała lokalizacja
+            umożliwiała łatwy dojazd do miejsca praktyk oraz atrakcji turystycznych.</p>
+          <div class="company-tags">
+            <span class="tag">Hostel</span>
+            <span class="tag">Omonia</span>
+            <span class="tag">Centrum Aten</span>
+          </div>
+        </div>
+
+        <!-- Erasmus+ -->
+        <div class="company-card reveal-up">
+          <div class="company-badge eu">Program UE</div>
+          <div class="company-icon-wrap">
+            <span class="company-emoji">🇪🇺</span>
+          </div>
+          <h3>Program Erasmus+</h3>
+          <p class="company-location">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Unia Europejska
+          </p>
+          <p class="company-desc">Mobilność zagraniczna uczniów odbyła się w ramach projektu „Zagraniczna mobilność
+            edukacyjna uczniów i absolwentów oraz kadry kształcenia zawodowego" współfinansowanego przez Unię Europejską
+            ze środków Europejskiego Funduszu Społecznego+, w Programie Fundusze Europejskie dla Rozwoju Społecznego
+            2021-2027, realizowanego na zasadach Programu Erasmus+.</p>
+          <div class="company-tags">
+            <span class="tag">EFS+</span>
+            <span class="tag">FERS 2021-2027</span>
+            <span class="tag">Mobilność</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXCURSIONS ========== -->
+  <section class="excursions-section">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="section-tag">Weekendy</span>
+        <h2 class="section-title">Wycieczki</h2>
+        <p class="section-desc">Dwie niezapomniane wycieczki w weekendy</p>
+      </div>
+
+      <div class="excursions-grid">
+        <div class="excursion-card reveal-left">
+          <div class="excursion-image">
+            <img src="galeria/P1060286.jpg" alt="Akropol" loading="lazy">
+            <div class="excursion-number">01</div>
+          </div>
+          <div class="excursion-content">
+            <h3>Akropol Ateński 🏛️</h3>
+            <p>Wizyta na legendarnym Akropolu – jednym z najważniejszych zabytków starożytnego świata. Podziwialiśmy
+              Partenon, Erechtejon i zapierające dech w piersiach panoramy Aten.</p>
+            <div class="excursion-meta">
+              <span>📍 Ateny, Grecja</span>
+              <span>📅 Weekend I</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="excursion-card reveal-right">
+          <div class="excursion-image">
+            <img src="galeria/P1060177.jpg" alt="Wyspa Aegina" loading="lazy">
+            <div class="excursion-number">02</div>
+          </div>
+          <div class="excursion-content">
+            <h3>Wyspa Aegina ⛵</h3>
+            <p>Rejs promem na malowniczą wyspę Aegina w Zatoce Sarońskiej. Piękne plaże, urokliwe miasteczko portowe i
+              słynna Świątynia Afai – niezapomniane chwile na greckiej wyspie.</p>
+            <div class="excursion-meta">
+              <span>📍 Aegina, Grecja</span>
+              <span>📅 Weekend II</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EU DISCLAIMER / FOOTER ========== -->
+  <footer class="main-footer">
+    <div class="container">
+
+      <div class="eu-disclaimer">
+        <div class="eu-flag-container">
+          <div class="eu-flag">🇪🇺</div>
+        </div>
+        <div class="eu-text">
+          <p class="eu-funding"><strong>Współfinansowane przez Unię Europejską ze środków Europejskiego Funduszu
+              Społecznego+</strong></p>
+          <p class="eu-legal">Mobilność zagraniczna uczniów odbyła się w ramach projektu „Zagraniczna mobilność
+            edukacyjna uczniów i absolwentów oraz kadry kształcenia zawodowego" współfinansowanego przez Unię Europejską
+            ze środków Europejskiego Funduszu Społecznego+, w Programie Fundusze Europejskie dla Rozwoju Społecznego
+            2021-2027 realizowanego na zasadach Programu Erasmus+.</p>
+          <p class="eu-project-number"><strong>Nr przedsięwzięcia:</strong> FERS-VET-2025-1-PL01-KA122-VET-000339499</p>
+          <p class="eu-legal" style="margin-top: 8px;">Wyrażone poglądy i opinie są jedynie opiniami autora lub autorów
+            i niekoniecznie odzwierciedlają poglądy i opinie Unii Europejskiej lub Europejskiej Agencji Wykonawczej ds.
+            Edukacji i Kultury (EACEA). Unia Europejska ani EACEA nie ponoszą za nie odpowiedzialności.</p>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>O Projekcie</h4>
+          <p>Praktyki zawodowe w Atenach realizowane w ramach programu Erasmus+ przez Zespół Szkół Technicznych w Mielcu
+            we współpracy z firmą EDU-IT z Rzeszowa, liderem Konsorcjum Erasmus+.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Szybkie Linki</h4>
+          <a href="#home">Strona Główna</a>
+          <a href="#participants">Uczestnicy</a>
+          <a href="#gallery">Galeria</a>
+          <a href="#companies">Firmy</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <p>Zespół Szkół Technicznych</p>
+          <p>Mielec, Polska</p>
+          <p style="margin-top: 8px; font-size: 0.8rem; color: var(--gray-500);">Opracowanie: Agnieszka Pieróg</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 ZST Mielec &bull; Erasmus+ &bull; FERS-VET-2025-1-PL01-KA122-VET-000339499</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Zamknij">&times;</button>
+    <img src="" alt="Powiększone zdjęcie">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
